@@ -20,7 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Rumah Nuwo Sesat.unity
     guid: 447f283b254b4ba43ada4798a196b515
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Rumah Tongkonan.unity
     guid: 32c7dd767a34d804d92af24f80bade87
   m_configObjects: {}
