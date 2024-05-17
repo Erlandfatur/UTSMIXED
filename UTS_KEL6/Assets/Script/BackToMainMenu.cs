@@ -6,6 +6,6 @@ using UnityEngine.SceneManagement;
 public class BackToMainMenu : MonoBehaviour
 {
     public void Backtomenu(){
-    SceneManager.LoadScene("Main Menu");
+    SceneManager.LoadScene("HomeMain");
    }
 }

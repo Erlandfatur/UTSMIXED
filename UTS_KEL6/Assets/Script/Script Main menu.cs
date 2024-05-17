@@ -5,19 +5,33 @@ using UnityEngine.SceneManagement;
 
 public class ScriptMainmenu : MonoBehaviour
 {
+    public void BtnMulai()
+    {
+        SceneManager.LoadScene("HomeMain");
+    }
+    public void BtnHome()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
     public void  RumahBaruga(){
-    SceneManager.LoadSceneAsync(1);
-   }
-    public void  RumahHonai(){
     SceneManager.LoadSceneAsync(2);
    }
-    public void  RumahKabaya(){
+    public void  RumahHonai(){
     SceneManager.LoadSceneAsync(3);
    }
-    public void  RumahNuwoSesat(){
+    public void  RumahKabaya(){
     SceneManager.LoadSceneAsync(4);
    }
-      public void  RumahTongkonan(){
+    public void  RumahNuwoSesat(){
     SceneManager.LoadSceneAsync(5);
    }
+      public void  RumahTongkonan(){
+    SceneManager.LoadSceneAsync(6);
+   }
+
+    public void BtnKeluar()
+    {
+        Application.Quit();
+        Debug.Log("Keluar");
+    }
 }
