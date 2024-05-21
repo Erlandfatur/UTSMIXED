@@ -7,10 +7,15 @@ public class NewRotateScaler : MonoBehaviour
 {
     public Slider RotateSlider;
     public Slider ScaleSlider;
+    public Slider RotateXSlider;
+
     public float scaleMinValue;
     public float scaleMaxValue;
-    public float rotMinValue;
-    public float rotMaxValue;
+    public float rotYMinValue;
+    public float rotYMaxValue;
+    public float rotXMinValue;
+    public float rotXMaxValue;
+
 
     // Start is called before the first frame update
     void Start()
@@ -21,10 +26,17 @@ public class NewRotateScaler : MonoBehaviour
         ScaleSlider.onValueChanged.AddListener(ScaleSliderUpdate);
 
 
-        RotateSlider.minValue = rotMinValue;
-        RotateSlider.maxValue = rotMaxValue;
+        RotateSlider.minValue = rotYMinValue;
+        RotateSlider.maxValue = rotYMaxValue;
 
         RotateSlider.onValueChanged.AddListener(RotateSliderUpdate);
+
+        RotateXSlider.minValue = rotXMinValue;
+        RotateXSlider.maxValue = rotXMaxValue;
+
+        RotateXSlider.onValueChanged.AddListener(RotateSliderAtas);
+
+
 
         
     }
@@ -43,4 +55,10 @@ public class NewRotateScaler : MonoBehaviour
     {
         transform.localEulerAngles = new Vector3(transform.rotation.x, value, transform.rotation.z);
     }
+
+    void RotateSliderAtas(float x)
+    {
+        transform.localEulerAngles = new Vector3(x, transform.rotation.y, transform.rotation.z);
+    }
+
 }
